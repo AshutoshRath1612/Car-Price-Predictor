@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Predictor</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Inconsolata&family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="imagediv">
+            <img src="../static/img/car.jpg" alt="">
+        </div>
+        <div class="quote">
+            <p id="q1">SELL YOUR CAR AT BEST PRICE</p>
+            <h2 id="q2">MOST-RELIABLE</h2>
+            <h1 id="q3">PRICE</h1>
+            <p id="q4">PREDICTOR</p>
+        </div>
+        <div class="formcontent">
+            <div id="heading">PREDICT YOUR CAR PRICE</div>
+            <div class="form">
+                <div class="select-container">
+                    <select name="company" id="company" onchange='load_car_model(this.id, "modell" , "{{model}}")'>
+                        <option value="" disabled selected>SELECT YOUR CAR BRAND</option>
+                        {% for company in brand %}
+                        <option value="{{company}}">{{company}}</option>
+                        {% endfor %}
+                    </select>
+                    <select name="modell" id="modell">
+                        <option value="" disabled selected>SELECT YOUR MODEL</option>
+                    </select>
+                    <select name="fuel_type" id="fuel_type">
+                        <option value="" disabled selected>SELECT FUEL TYPE</option>
+                        {%for fuels in fuel_type%}
+                        <option value="{{fuels}}">{{fuels}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="secondrow">
+                    <input type="number" name="year" id="year" placeholder="YEAR OF PURCHASE">
+                    <input type="number" name="kms_driven" id="kms_driven" placeholder="TOTAL KMS DRIVEN">
+                </div>
+            </div>
+            <div id="result"><h2 id="resulttxt"></h2></div>
+            <button id="predictbutton" onclick="senddata()">PREDICT PRICE</button>
+        </div>
+    </div>
+    <script src="../static/js/script.js"></script>
+    </body>
+</html>

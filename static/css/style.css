@@ -1,0 +1,156 @@
+body{
+  background-color: aquamarine;
+}
+img{
+    width: 99vw;
+    height: 70vh;
+    object-fit: cover;
+}
+.quote{
+    position: absolute;
+    top: 151px;
+    left: 3rem;
+    width: 500px;
+    height: 300px;
+}
+#q1{
+    font-family: 'Cabin', sans-serif;
+    color: aqua;
+    font-size: 1.6rem;
+    margin: 0;
+}
+#q2{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+    font-weight: lighter;
+    margin: 0;
+    font-size: 4rem;
+}
+#q3{
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 5rem;
+    margin-left: -5px;
+}
+#q4{
+    color: aqua;
+    font-size: 1.3rem;
+    margin: 0;
+    font-family: sans-serif;
+}
+.formcontent{
+    display: flex;
+    flex-direction: column;
+    background-color: #6e6ec46b;
+    height: 47%;
+    width: 50%;
+    position: absolute;
+    top: 48%;
+    left: 25%;
+}
+#heading{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 20px;
+    display: block;
+    margin: auto;
+    font-family: monospace;
+}
+.form{
+    height: 90%;
+}
+select{
+    border: 1px solid gray;
+    font-family: 'Cabin', sans-serif;
+    margin: 0 10px;
+}
+
+/* Style the select container */
+.select-container {
+    display: flex;
+    position: relative;
+    width: 98%;
+    margin: 0 0 18px 0;
+    padding: 10px; /* Adjust the width as needed */
+  }
+  
+  /* Style the select element */
+  .select-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: rgb(49, 46, 46);
+    appearance: none; /* Remove default arrow in some browsers */
+  }
+  
+  /* Style the arrow icon for the select */
+  .select-container::after {
+    content: none; /* Unicode down arrow character */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  /* Style the select options */
+  .select-container select option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style the select when it's focused */
+  .select-container select:focus {
+    outline: none;
+    border-color: #007bff; /* Change the border color on focus */
+  }
+  .secondrow{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  input{
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: rgb(49, 46, 46);
+    font-weight: bold;
+  }
+  ::placeholder{
+    color: #333;
+    font-family: 'Cabin' , sans-serif;
+    font-weight: lighter;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  #predictbutton{
+    width: 95%;
+    display: block;
+    height: 100px;
+    font-size: 1.2rem;
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+    margin: 10px 20px;
+    font-family: 'Cabin' , sans-serif;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  #predictbutton:hover{
+    background-color: red;
+    color: white;
+  }
+  #result{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    font-family: monospace;
+  }
